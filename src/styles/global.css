@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primaryBgColor: hsl(204deg, 67%, 85%);
+    --secondaryBgColor: hsl(200deg, 75%, 65%);
+    --textColor: hsl(222deg, 22%, 5%);
+    --red: #de530f;
+    --hoverColor: hsl(245deg, 100%, 60%);
+
+}
+
+body {
+   
+}
