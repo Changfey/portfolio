@@ -28,7 +28,7 @@ export const Header = () => {
                 </svg>
             </div>
             {/* the burger at right for small screen */}
-            <div className="md:hidden block relative h-[40px] w-[40px] cursor-pointer" onClick={handleMenuBurger}>
+            <div className="md:hidden block relative z-20 h-[40px] w-[40px] cursor-pointer" onClick={handleMenuBurger}>
                 <span className={`absolute left-[14px] top-[16px] h-[2px] w-[20px] bg-red transition ease-in-out duration-300 ${open ? 'translate-y-[6px] rotate-45' : ''}`}></span>
                 <span className={`absolute left-[14px] top-[22px] h-[2px] w-[20px] bg-red transition ease-in-out duration-300 ${open ? 'opacity-0' : 'opacity-100'}`}></span>
                 <span className={`absolute left-[14px] top-[28px] h-[2px] w-[20px] bg-red transition ease-in-out duration-300 ${open ? '-translate-y-[6px] -rotate-45' : ''}`}></span>
@@ -39,8 +39,16 @@ export const Header = () => {
                 <span className="text-red hover:text-secondaryColor cursor-pointer">Work</span>
                 <span className="text-red hover:text-secondaryColor cursor-pointer">Skill</span>
                 <span className="text-red hover:text-secondaryColor cursor-pointer">Projects</span>
-
             </nav>
+            {/* the page opens when user click the burger */}
+            <div className={`md:hidden ${open ? 'block' : 'hidden'} absolute left-0 top-0 z-10 bg-primaryBgColor h-full w-full opacity-75 flex flex-col pl-[50px] pt-[200px] font-mono
+ text-3xl `}>
+                <span className="text-red hover:text-secondaryColor cursor-pointer py-[30px]">About</span>
+                <span className="text-red hover:text-secondaryColor cursor-pointer py-[30px]">Work</span>
+                <span className="text-red hover:text-secondaryColor cursor-pointer py-[30px]">Skill</span>
+                <span className="text-red hover:text-secondaryColor cursor-pointer py-[30px]">Projects</span>
+
+            </div>
         </header>
     )
 }
